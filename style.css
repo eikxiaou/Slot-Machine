@@ -1,0 +1,51 @@
+:root{
+    --speed:5;
+}
+.machine{
+    background-color: chocolate;
+    height: 260px;
+    width: 560px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    z-index: 4;
+
+}
+
+.slot{
+    background-color: darkgray;
+    height: 180px;
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+    padding:10px;
+    font-size: 100px;
+    padding-top: 30pt;
+    border: black;
+    border-radius: 10pt;
+    display: flex;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.emoji{
+    animation-name: slotspin;
+    animation-iteration-count: infinite;
+    animation-duration: calc(1s/var(--speed));
+    z-index: 1;
+}
+
+@keyframes slotspin {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform:translateY(+200px);
+    }
+}
+
+#inputspeed{
+    font-size: larger;
+    border-width: 2pt;
+    margin-left: 10pt;
+}
